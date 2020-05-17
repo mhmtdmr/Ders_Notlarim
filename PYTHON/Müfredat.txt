@@ -1,0 +1,16 @@
+# Müdredat
+
+1- Algoritmaya giriş
+2- Temel IDE tanıtımı, Python'a giriş.
+3- Değişkenler
+4- Tür DÖnüşümleri
+5- Operatörler
+6- Akış kontrol(if,elif,else)
+6.5-  Döngüler
+7- List,Tuple,Dictionary,Set
+8- Fonksiyonlar
+9- Dosya okuma yazma işlemleri.
+10- Nesneye yönelik programlama
+11- Veri tabanı işlemleri(Sqlite)
+12- tkinter ile grafik arayüz tasarımı
+13- proje
