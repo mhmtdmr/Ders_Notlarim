@@ -222,4 +222,60 @@ topla = lambda a,b:a+b #önce parametreler,sonra sonucu döndürülecek işlem
 print("lambda dan gelen kare 5: ",kare(5))
 print("lambda'dan gelen toplama:",topla(14,74))
 
-# import ile modül kullanımı anlatılacak.
+# import ile modül kullanımı.
+
+import Matematik
+
+sonuc = Matematik.Topla(3,4)
+print(sonuc)
+
+from Matematik import *
+
+sonuc = Topla(5,6)
+print(sonuc)
+
+
+#####   import Alıştırma   #####
+
+
+# Kendi isminiz ile bir modül oluşturup
+# Modül içerisinde sansur(cumleListesi,yasakKelime,yeniKelime) isminde bir metot oluşturun.
+# Bu metot kendisine gönderilen cümle listesinde ve yasaklı kelimeye göre sansürleme yapacak.
+# sansur("Çocuklar kahve içerse kararır.","kahve","k")
+
+#Ders9.py dosyasında input ile aldığımız 3 metnin sağında ve solundaki boşlukları silip.
+#bir listeye atın.
+#import Sansur
+"""
+from Sansur import sansur
+cumleler=[]
+for i in range(3):
+    cumle = input("Cumle giriniz:")
+    cumle=cumle.strip()
+    cumleler.append(cumle)
+
+yeniListe = sansur(cumleler,"kahve","K")
+print(yeniListe)
+"""
+import webbrowser as web
+
+from os import name
+print(name)
+
+
+#web.open("www.ucuncubinyil.com")
+
+# Soru: Klavyeden alınan cümledeki aranan kelimenin yarısını "yok" olarak değiştiren
+# fonksiyon. cumleDegistir(cumle,kelime):
+#                   return cumle
+"""
+cumle = input()
+cumleDegistir(cumle,"test")
+"""
+def cumleDegistir(cumle,kelime):
+    sayi=cumle.count(kelime)/2
+    cumle = cumle.replace(kelime,"yok",sayi)
+    return  cumle
+yaz=input("Cümle:")
+
+print(cumleDegistir(yaz,"A"))
