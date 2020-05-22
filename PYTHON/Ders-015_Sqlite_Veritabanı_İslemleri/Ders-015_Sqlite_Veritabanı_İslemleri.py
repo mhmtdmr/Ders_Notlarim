@@ -98,4 +98,65 @@ OgrenciListele()
 
 vt.close()                          # Veri tabanı bağlantısını sonladırır.
 
+
+
+
+## Sql Injection'a uygun veri kayıt işlemi.
+"""
+try:
+    numara = int(input("Numara giriniz:"))
+    ad = input("ad:")
+    soyad = input("soyad:")
+
+    komut = "INSERT INTO Ogrenci (numara,ad,soyad) VALUES("+str(numara)+",'"+ad+"','"+soyad+"');"
+    print(komut)
+    cur = vt.cursor()
+    cur.executescript(komut)
+    vt.commit()
+    vt.close()
+    print("Kayıt başarılı.")
+except:
+    print("Kayıt sırasında bir hata oluştu.")
+"""
+
+## PARAMETRELİ INSERT SQL INJECTION'ı engeller.
+"""
+try:
+    numara = int(input("Numara giriniz:"))
+    ad = input("ad:")
+    soyad = input("soyad:")
+
+    komut = "INSERT INTO Ogrenci (numara,ad,soyad) VALUES(?,?,?);"
+    print(komut)
+    cur = vt.cursor()
+    cur.execute(komut,(numara,ad,soyad))
+    vt.commit()
+    vt.close()
+    print("Kayıt başarılı.")
+except:
+    print("Kayıt sırasında bir hata oluştu.")
+"""
+
+## Listeyi veritabanındaki tabloya kaydetme.
+"""
+ogrenciler = [(3,'Selin','Kahraman'),(4,'Tuba','Kaynarca'),(5,'Eray','Erdem'),(6,'Türker','Baltacı')]
+try:
+    komut = "INSERT INTO Ogrenci (numara,ad,soyad) VALUES(?,?,?);"
+    cur = vt.cursor()
+    cur.executemany(komut,ogrenciler)
+    vt.commit()
+    vt.close()
+    print("Kayıt başarılı.")
+except:
+    print("Kayıt sırasında bir hata oluştu.")
+"""
+
+# Ders-015_SQL_Class.py dosyası ile sınıf yapısı ile veri tabanı erişimleri anlatılacak.
+
 # Daha fazlası için: https://www.sqlitetutorial.net/
+
+
+
+
+
+
