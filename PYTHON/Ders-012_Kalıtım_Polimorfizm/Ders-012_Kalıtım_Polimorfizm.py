@@ -117,13 +117,27 @@ Bilgi(b1)
 '''
 
 
+#######################################
+'''
+ANASINIF: Banka: AdSoyad,IBAN,Bakiye
 
+EFT(hedefIBAN,miktar):
+eft_ucreti=0
+Önce bakiye kontrolü yapsın. Daha sonra transferi yapıp. Şu IBAN'dan şu IBAN'a
+Şu Miktarda transfer gerçekleşmiştir.
+miktarı bakiyeden düşsün.
 
+ALTSINIF:
+Garanti: Takim
 
+EFT(hedefIBAN,miktar):
+eft_ucreti=10
+Önce bakiye kontrolü yapsın. Daha sonra transferi yapıp. Şu IBAN'dan şu IBAN'a
+Şu Miktarda transfer gerçekleşmiştir.
+miktarı bakiyeden düşsün.
 
+#EK: print edilen cümleyi bir dosyaya yazsın. txt.
 
-
-
-
-
-
+Akbank: Bank sınıfından kullanacağım
+Garanti: Kendi sınıfımdan kullanacağım.
+'''
