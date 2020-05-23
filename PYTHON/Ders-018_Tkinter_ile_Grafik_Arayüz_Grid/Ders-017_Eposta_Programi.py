@@ -20,7 +20,7 @@ def Epostala():
         gmail = smtplib.SMTP("smtp.gmail.com",587) # Gmail SMTP bilgileri
         gmail.ehlo()
         gmail.starttls()
-        gmail.login("test.mehmetdemir@gmail.com","Fast**BJK")
+        gmail.login("test.mehmetdemir@gmail.com","Parolayı_Yaz")
         gmail.sendmail(eposta["From"],eposta["To"],eposta.as_string())
         messagebox.showinfo("Epostala","E-posta gönderimi başarılı.")
         gmail.close()
