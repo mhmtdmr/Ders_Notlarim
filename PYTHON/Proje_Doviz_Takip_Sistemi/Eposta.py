@@ -24,7 +24,7 @@ def Gonder(kime,doviztipi,alarmtipi,esik,kur):
         gmail = smtplib.SMTP("smtp.gmail.com",587) # Gmail SMTP bilgileri
         gmail.ehlo()
         gmail.starttls()
-        gmail.login("test.mehmetdemir@gmail.com","tMacka1903")
+        gmail.login("test.mehmetdemir@gmail.com","Parolayı_Yaz")
         gmail.sendmail(eposta["From"],eposta["To"],eposta.as_string())
         print("E-posta gönderimi başarılı.")
         gmail.close()
