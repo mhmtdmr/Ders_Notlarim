@@ -117,12 +117,12 @@ public class Ders_006_Metotlar {
 		
 		System.out.println("45 100'den büyük mü?:"+BuyukMu100den(45));
 		*/
-		// Parametre olarak aldığı sayının tek olup olmadmadığını kontrol edip true/false d�nd�ren metot.
+		// Parametre olarak aldığı sayının tek olup olmadmadığını kontrol edip true/false döndüren metot.
 		// Ornek: TekMi(99) => true
 		
 		/*
 		 * sayıUret(byte ilk,byte son,byte adet)
-		 * ilk sayı ile son sayı arasında adet kadar sayı �retip bir ArrayListe atarak d�nd�r�n.
+		 * ilk sayı ile son sayı arasında adet kadar sayı �retip bir ArrayListe atarak döndür�n.
 		 * dönüş tipi ArrayList<Byte> olacak. 
 		 */
 /*
@@ -140,13 +140,49 @@ public class Ders_006_Metotlar {
 		*/
 		
 		//int sa = (min+(int)Math.random()*max-min);
-		// SORU: Klavyeden sayı isteme metodu: intGir(); geriye klavyeden alınan int sayıyı d�nd�rs�n.
+		// SORU: Klavyeden sayı isteme metodu: intGir(); geriye klavyeden alınan int sayıyı döndürs�n.
 		
 
 		
 		int sayi1 = intGir();
 		int sayi2 = intGir();
 		System.out.println();
+		
+		
+		/* SORU: ListeOrtalama isminde bir metot tanımlayın. Integer tipinde bir
+		 * ArrayList alacak. ve Bu ArrayList in ortalamasını bulup döndürecek. */
+		
+		ArrayList<Integer> listem = new ArrayList<Integer>();
+		listem.add(5);
+		listem.add(15);
+		listem.add(25);
+		
+		//System.out.println(ListeOrtalama(listem));
+		
+		
+		// Parametre olarak aldığı ArrayList'teki sayıların karelerini başka bir
+		// listeye atıp bu listeyi döndüren fonksiyon
+		System.out.println(KareListe(listem));
+		
+		/*SORU: Kendisine gönderilen sayının Asal olup olmadığını bulan fonksiyon*/
+
+		/*
+		System.out.println("1 Asal mı?:"+AsalKontrol(1));
+		System.out.println("2 Asal mı?:"+AsalKontrol(2));
+		System.out.println("6 Asal mı?:"+AsalKontrol(6));
+		System.out.println("5 Asal mı?:"+AsalKontrol(5));
+		*/
+		
+		// SORU: Klavyeden sayı girişi için kısa bir fonksiyon yazınız.
+		/*
+		Scanner in = new Scanner(System.in);
+		System.out.print("Sayi gir:");
+		int sayi = in.nextInt();
+		*/
+		int sayi = input("sayı giriniz:");	
+		System.out.println("Girilen sayı: "+sayi);
+		
+	
 		
 		
 		
@@ -317,6 +353,57 @@ public class Ders_006_Metotlar {
 			return true;
 		else
 			return false;
+	}
+	
+	
+	public static ArrayList<Integer> ListeDondur()
+
+	{
+		ArrayList<Integer> sayiListesi = new ArrayList<Integer>();
+		sayiListesi.add(10);
+		sayiListesi.add(20);
+		sayiListesi.add(36);
+		
+		for (Integer sayi : sayiListesi) {
+			
+		}
+		
+		return sayiListesi;
+	}
+	
+	public static int ListeOrtalama(ArrayList<Integer> listem)
+	{
+		int toplam =0;
+		for (Integer sayi : listem) {
+			toplam += sayi;
+		}
+		return (toplam/listem.size());
+				
+	}
+	
+	public static ArrayList<Integer> KareListe(ArrayList<Integer> sayilar)
+	{
+		ArrayList<Integer> kareler = new ArrayList<Integer>();
+		for (Integer sayi : sayilar) {
+			kareler.add(sayi*sayi);
+		}
+		return kareler;
+	}
+	
+	
+	public static boolean AsalKontrol(int sayi)
+	{
+		if(sayi==1)
+			return false;
+		else
+		{
+			for(int i=2; i<sayi;i++)
+			{
+				if(sayi%i==0)
+					return false;
+			}
+			return true;
+		}
 	}
 	
 }
