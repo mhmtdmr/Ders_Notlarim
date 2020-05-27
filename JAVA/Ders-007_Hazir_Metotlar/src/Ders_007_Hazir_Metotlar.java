@@ -224,6 +224,56 @@ public class Ders_007_Hazir_Metotlar {
 		
 		
 		
+		// Matematik Fonksiyonları
+		
+		/*
+		abs(x) 	: 	Mutlak değerini döndürür: Math.abs(-9) => 9
+		acos(x)
+		asin(x)
+		atan(x)
+		atan2(y,x)
+		cbrt(x)
+		ceil(x)
+		copySign(x, y)
+		cos(x)
+		cosh(x)
+		exp(x)
+		expm1(x)
+		floor(x)
+		getExponent(x)
+		hypot(x, y)
+		IEEEremainder(x, y)
+		log(x)
+		log10(x)
+		log1p(x)
+		max(x, y)
+		min(x, y)
+		nextAfter(x, y)
+		nextUp(x)
+		pow(x, y) :  	Returns the value of x to the power of y : Math.pow(5,2) => 25
+		random()  :		0-1 arasında bir sayı döndürür: Math.random()
+		round(x)
+		rint()
+		signum(x)
+		sin(x)
+		sinh(x)
+		sqrt(x)   :  	Returns the square root of x : Math.sqrt(25) => 5
+		tan(x)
+		tanh(x)
+		toDegrees(x)
+		toRadians(x)
+		ulp(x)
+
+		
+		
+		// Not: Eksik açıklamalar proje dizinindeki görsellerde mevcuttur.
+		
+		*/
+		
+		
+		
+		
+		
 		
 		// Kaynaklar
 		
